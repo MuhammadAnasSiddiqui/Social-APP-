@@ -1,4 +1,10 @@
-// For Login Page 
+window.addEventListener("load", function () {
+    var getUsers = JSON.parse(localStorage.getItem("loginUser"));
+    if (getUsers) {
+        window.location.replace("./dashboard.html")
+    }
+    console.log(getUsers)
+})
 
 function login() {
     var userEmail = document.getElementById("email").value
@@ -9,7 +15,7 @@ function login() {
 
     var getUserData = JSON.parse(localStorage.getItem("userData"));
     // console.log(getUserData);
-    
+
 
     var findUser = getUserData.find(function (value) {
         if (value.email === userEmail && value.password === userPassword) return true
@@ -20,13 +26,13 @@ function login() {
     })
     console.log(findUser)
     // return
-    if (findUser !== undefined) {
+    if (findUser) {
         alert("successfully Login");
 
         localStorage.setItem("loginUser", JSON.stringify(findUser));
-        window.location.href = "./dashboard.html"
+        window.location.replace("./dashboard.html")
     }
-    else{
+    else {
         alert("Email OR Password does not match")
     }
 

@@ -1,4 +1,11 @@
-// console.log("check");
+window.addEventListener("load", function () {
+    var getUsers = JSON.parse(localStorage.getItem("loginUser"));
+    if (getUsers) {
+        window.location.replace("./dashboard.html")
+    }
+    console.log(getUsers)
+})
+
 
 function signUp() {
 
@@ -38,9 +45,7 @@ function signUp() {
 
     }
     else {
-
-
-        // console.log("other users");
+        console.log("other users");
 
         var findUser = getData.find(function (value) {
             // console.log(value.email, "value");
@@ -72,7 +77,6 @@ function signUp() {
 
 
 
-    // console.log(array)
 }
 
 

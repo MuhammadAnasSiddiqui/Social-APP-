@@ -1,17 +1,20 @@
-body{
-    background-color:     #2323a1 !important
+body {
+    background-color: #2323a1 !important
 }
-.email-input{
+
+.email-input {
     background-color: #161691 !important;
     border: none !important;
     outline: none !important
 }
-.socialNav{
+
+.socialNav {
     display: flex !important
-    /* background: red !important   */
+        /* background: red !important   */
 }
-.socialNav > div {
+
+.socialNav>div {
     flex: 1 !important
-    /* justify-content: space-around */
+        /* justify-content: space-around */
 
 }
